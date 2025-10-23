@@ -30,7 +30,7 @@ class Quiz{
   Quiz({required this.questions, String? id}) : id = id ?? uuid.v4();
   Quiz.readFromFile({required this.questions, required this.players, String? id}) : id = id ?? uuid.v4();
   void addAnswer(Answer answer) {
-     this.answers.add(answer);
+    this.answers.add(answer);
   }
 
   double getScoreInPercentage(){
@@ -67,7 +67,6 @@ class Quiz{
     }
   }
 }
-
 class Player{
   final String name;
   late int score;

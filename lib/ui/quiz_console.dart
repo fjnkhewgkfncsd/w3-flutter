@@ -9,7 +9,8 @@ class QuizConsole {
 
   void startQuiz() {
     print('--- Welcome to the Quiz ---\n');
-    int index = 0;
+    int index = quiz.players.length;
+    print('number of players: ${quiz.players.length}');
     while(true){
       stdout.write("your name: ");
       String? name = stdin.readLineSync();
@@ -47,7 +48,7 @@ class QuizConsole {
     }
 
     for(var player in quiz.players){
-      print("player ${player.name} scored ${player.score} points (${player.scoreInPercentage} %)");
+      print("player ${player.name} scored ${player.score } points (${player.scoreInPercentage} %)");
     }
   }
 
